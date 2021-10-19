@@ -1,18 +1,18 @@
 #include<stdio.h>
-int chdecimal(int num){
+int chdecimal(int n){
     int x=1;
     int deci=0;
-    while(num>0){
-        int last=num%10;
+    while(n>0){
+        int last=n%10;
         deci+= last*x;
         x*=2;
-        num=num/10;
+        n=n/10;
     }
     return deci;
 }
 void main(){
     int n;
-    printf("Enter binary input:-\n");
+    printf("Enter your binary input:-\n");
     scanf("%d",&n);
     int res=chdecimal(n);
     printf("Decimal number is:-\n%d",res);
